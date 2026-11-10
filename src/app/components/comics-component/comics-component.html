@@ -1,0 +1,13 @@
+<h4 style="color: rgb(0, 0, 0);">
+    {{mensaje}}
+</h4>
+<h4 style="color: rgb(0, 0, 0);">{{comic.titulo}}</h4>
+<img src="{{comic.imagen}}"
+style="width: 200px; height:250px"/>
+<p>{{comic.descripcion}}</p>
+@for (comic of arraycomics; track comic){
+<h4 style="color: rgb(255, 0, 0);">{{comic.titulo}}</h4>
+<img src="{{comic.imagen}}"
+style="width: 200px; height:250px"/>
+<p>{{comic.descripcion}}</p>
+}
