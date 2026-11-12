@@ -1,0 +1,28 @@
+<h1>Api hospitales</h1>
+<form #form="ngForm">
+    Id hospital:
+    <input type="number" name="cajaid" #cajaid/>
+    <button (click)="buscarHospital()">
+        Buscar
+    </button>
+</form>
+@if (hospital) {
+<div style="background-color: antiquewhite;">
+    <h2>{{hospital.idHospital}}</h2>
+    <p>{{hospital.nombre}}</p>
+    <p>{{hospital.direccion}}</p>
+    <p>{{hospital.telefono}}</p>
+    <p>{{hospital.camas}}</p>
+</div>
+}
+<button (click)="cargarHospital()" class="btn btn-info">
+    Mostrar hospitales
+</button>
+@for (hospital of arrayhospitales; track hospital){
+    <h3 style="color: rgb(43, 81, 81);">Nombre: {{hospital.idHospital}}</h3>
+    <p>Id: {{hospital.nombre}}</p>
+    <p>Email: {{hospital.direccion}}</p>
+    <p>Edad: {{hospital.telefono}}</p>
+    <p>Edad: {{hospital.camas}}</p>
+    
+}

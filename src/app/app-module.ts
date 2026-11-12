@@ -8,11 +8,32 @@ import { ComicsComponent } from './components/comics-component/comics-component'
 import { ServiceComics } from './services/service.comics';
 import { ClientesComponent } from './components/clientes-component/clientes-component';
 import { ServiceClientes } from './services/service.clientes';
+import { PersonasApiComponent } from './components/personas-api-component/personas-api-component';
+import { provideHttpClient } from '@angular/common/http';
+import { ServicePersonas } from './services/service.personas';
+import { FormsModule } from '@angular/forms';
+import { HospitalesApiComponent } from './components/hospitales-api-component/hospitales-api-component';
+import { ServiceHospitales } from './services/service.hospitales';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeComponent, ComicsComponent, ClientesComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [ServiceComics,ServiceClientes, provideBrowserGlobalErrorListeners()],
+  declarations: [
+    App,
+    MenuComponent,
+    HomeComponent,
+    ComicsComponent,
+    ClientesComponent,
+    PersonasApiComponent,
+    HospitalesApiComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [
+    ServiceHospitales,
+    ServicePersonas,
+    provideHttpClient(),
+    ServiceComics,
+    ServiceClientes,
+    provideBrowserGlobalErrorListeners(),
+  ],
   bootstrap: [App],
 })
 export class AppModule {}
