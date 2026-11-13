@@ -1,0 +1,12 @@
+<h1 style="color: darkslategray;">
+    Api Customer
+</h1>
+<ul>
+    @for (customer of arraycustomers; track customer){
+        <li>Name: {{customer.ContactName}}</li>
+        <li>Company: {{customer.CompanyName}}</li>
+        <li>Title: {{customer.ContactTitle}}</li>
+        <li>Ciudad: {{customer.City}}</li>
+        <li><hr></li>
+    }
+</ul>

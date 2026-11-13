@@ -1,0 +1,13 @@
+<h1 style="color: darkslategray;">
+    Api Coches
+</h1>
+<ul>
+    @for (coche of arraycoches; track coche){
+        <li>ID coche: {{coche.idCoche}}</li>
+        <li>Marca: {{coche.marca}}</li>
+        <li>Modelo: {{coche.modelo}}</li>
+        <li>Conductor: {{coche.conductor}}</li>
+        <li><img src="{{coche.imagen}}"/></li>
+        <li><hr></li>
+    }
+</ul>

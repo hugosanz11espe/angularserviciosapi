@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { firstValueFrom } from "rxjs";
 import { Persona } from "../models/persona";
-import { Global } from "../global";
 import { environment } from "../../environments/environment.development";
 
 @Injectable()
